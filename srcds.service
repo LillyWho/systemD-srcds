@@ -1,0 +1,15 @@
+[Unit]
+2	Description=CSGO SRCDS # Change as needed
+3	Wants=network.service
+4	After=network.service
+5	[Service]
+6	User=steam # Change as needed
+7	Group=steam
+8	Type=forking
+9
+10	WorkingDirectory=/srcds_csgo # Change as needed
+11	Restart=on-failure
+12	RestartSec=5
+13	ExecStart=screen -d -m /srcds_csgo/srcds_run -game csgo -console -condebug -usercon +game_type 0 +game_mode 0 +map de_dust2 # Change as needed
+14	[Install]
+15	WantedBy=multi-user.target
