@@ -1,2 +1,2 @@
 # systemD-srcds
-systemD unit or SRCDS, depends on screen
+systemD unit for SRCDS, depends on screen
